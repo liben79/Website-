@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="cloth/c9.jpeg" type="image/jpg"/>
+</head>
+<style type="text/css">
+	body{
+		font-size: 30px;
+	}
+ .nav{
+   	width: 100%;
+   	height: 100vh;
+   	background-image: url(bk.jpeg);
+   	background-size: cover;
+   	background-position:center;
+   	position: relative;
+   	overflow: hidden;
+   }
+
+ .adv img{
+ 	width: 100px;
+ 	height: 100px;
+ 	animation: advert 10s linear infinite;
+
+ }
+ .adv img:hover{
+ 	width: 400px;
+ 	height: 300px;
+ 	border-radius: 30%;
+ }
+ .adv{
+ 	width: 100%;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-around;
+ 	position: absolute;
+ 	bottom: -100px;
+
+ }
+ @keyframes advert{
+ 	0%{
+      transform: translateY(0);
+      opacity: 0;
+ 	}
+   50%{
+     
+      opacity: 1;
+ 	} 
+    70%{
+    
+      opacity: 1;
+ 	}
+ 	100%{
+      transform: translateY(-80vh);
+      opacity: 0;
+ 	}     
+
+ }
+  .adv img:nth-child(1){
+  	animation-delay: 1s;
+  }
+  .adv img:nth-child(2){
+  	animation-delay: 2s;
+  }
+  .adv img:nth-child(3){
+  	animation-delay: 5s;
+  }
+  .adv img:nth-child(4){
+  	animation-delay: 4.5s;
+  }
+  .adv img:nth-child(5){
+  	animation-delay: 3s;
+  }
+  .adv img:nth-child(6){
+  	animation-delay: 1s;
+  	width: 150px;
+  }
+</style>
+<script>
+	window.onload = function() {
+		changeBG();
+	}
+
+	function changeBG() {
+		var oDiv = document.getElementById('div1');
+		var ah1 = document.getElementById('h1');
+
+		var aImg = ['comp3.jpeg','comp1.jpeg','p1.jpeg','p2.jpeg','p6.jpeg','logo.jpeg','bk.jpeg','comp2.jpg'];
+		var i = 0;			
+		setInterval(function() {			
+			if (i == aImg.length) {i=0;}
+			oDiv.style.backgroundImage = 'url("'+aImg[i]+'")';
+			oDiv.style.transition = '0.4s';
+			ah1.style.color = 'blue';				
+			i++;
+		},3000);
+	}
+	changeBG();
+
+</script>
+<body>
+	<div id="div1" class="topheader" style="background-image: url('logo.jpeg'); color: #000;">
+		<h1 id="h1">Baga nagaan dhuftan!</h1>
+		<h2>@李本淘宝/Giddugala Gabaa Liiban</h2>
+		<h4 style="color: #fff;">Teekinoloojjiin haa sochoonu!</h4>
+	</div>
+
+	<div class="navbar" >
+		<ul>
+		<li class="active"> <a href="index.html"> Home</a></li>
+		<li><a href="el.html" target="here">Electronics</a></li>
+		<li><a href="inf.html" target="here">Infrastructure</a></li>
+		<li><a href="shoes.html">Shoes</a></li>
+		<li><a href="cloth.html">Clothes</a></li>
+		<li><a href="fruit.html">Fruits</a></li>
+		<li><a href="sport.html">Sports</a></li>
+		<li><a href="medicine.html">Medicine</a></li>
+		<li><a href="inter.html">Intertainments</a></li>
+		<li><a href="login.html">Login</a></li>
+	</ul>
+	</div>
+	<div class="nav">
+	<div class="adv">
+	<img src="logo.jpeg">
+	<img src="p2.jpeg">
+	<img src="p11.jpeg">
+	<img src="comp3.jpeg">
+	<img src="p4.jpg">
+	<img src="comp2.jpg">
+</div>
+
+
+
+
+
+</div>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+	<div class="footer">
+		<footer>
+			&copy;<script type="text/javascript">
+				document.write(new Date().getFullYear());
+			</script>
+			All right reserved.
+			@李本淘宝/Liiban Godaanaa
+		</footer>
+	</div>
+</body>
+</html>
