@@ -1,0 +1,95 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login page</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="cloth/c9.jpeg" type="image/jpg"/>
+</head>
+<style type="text/css">
+	body{
+		background-image: url(fruit/f16.jpeg) ;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.frm{
+	background-color: #456;
+		opacity: 0.8;
+		font-size: 25px;
+		font-weight: bold;
+		color: white;
+		height: 400px;
+		width: 400px;
+		margin-top: 40px;
+		margin-left: 900px;
+		padding-top: 100px;
+		padding-left: 20px;
+		border-radius: 10%;
+
+	}
+	.frm:hover{
+		opacity: 1;
+	}
+	input{
+		font-size: 20px;
+		text-align: center;
+		border-radius: 2%;
+		padding-top: 10px;
+
+
+
+	}
+	input:hover{
+		border-radius: 2%;
+		border: 3px brown;
+		cursor: pointer;
+
+	}
+button{
+	font-size: 30px;
+		background-color: blue;
+		color: white;
+		margin-left: 200px;
+	}
+	h1{
+     background-color:#456;
+     font-size: 30px;
+    text-align: center;
+    color: white;
+ box-shadow: 0 8px 23px 0  rgba(12, 200,24,0.787);
+   padding: 20px;
+	}
+	button:hover{
+		border-radius: 15%;
+		border-color: brown;
+	}
+	.lgn{
+		color: #fff;
+		width: 100px;
+	}
+
+</style>
+<body>
+		<div class="navbar" >
+		<ul>
+		<li > <a href="index.html"> Home</a></li>
+		<li><a href="el.html" target="here">Electronics</a></li>
+		<li><a href="inf.html" target="here">Infrastructure</a></li>
+		<li><a href="shoes.html">Shoes</a></li>
+		<li><a href="cloth.html">Clothes</a></li>
+		<li><a href="fruit.html">Fruits</a></li>
+		<li><a href="sport.html">Sports</a></li>
+		<li><a href="medicine.html">Medicine</a></li>
+		<li><a href="inter.html">Intertainments</a></li>
+		<li class="active"><a href="login.html">Login</a></li>
+	</ul>
+	</div>
+	<form class="frm">
+		First Name: <input type="text" name="" value="" placeholder="Enter your first name"><br><br>
+		Last Name:&nbsp;    <input type="text" name="" value="" placeholder="Enter your last name"><br><br>
+		Password:   &nbsp;&nbsp;     <input type="password" name="" value="" placeholder="Enter password"><br><br>
+<button class="lgn" type="button" onclick="document.getElementById('p').innerHTML="Yeroof tajaajila jala hin qabne.>Login</button>
+<p id="p"></p>
+</body>
+</html>
