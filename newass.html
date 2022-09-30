@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <style>
+        .main {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background: rgb(121, 115, 115);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 60px;
+            margin-bottom: 80px;
+            justify-content: space-between;
+        }
+
+        .brand-name {
+            font-size: 40px;
+            color: black;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .our-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: 80px;
+        }
+
+        .main-main {
+            width: 100%;
+            height: 100%;
+
+            background-color: rgb(121, 115, 115);
+        }
+
+        .main-main p {
+            padding-left: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 50px;
+        }
+
+        .menu {
+            visibility: hidden;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        #nav-main {
+            visibility: hidden;
+            position: absolute;
+            left: 0px;
+            top: 70px;
+            margin-bottom: 100px;
+            height: 200px;
+            width: 100%;
+        }
+
+        .menu {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            width: 50px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-div {
+            width: 90%;
+            height: 10px;
+            border-bottom: 5px solid black;
+            margin-bottom: 5px;
+        }
+
+        #nav-main .nav-main-div {
+            width: 100%;
+            height: 20px;
+            border-top: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        #nav-main .nav-main-div:last-child {
+            border-bottom: 3px solid black;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                visibility: visible;
+            }
+            
+
+        }
+        @media (min-width: 700px){
+            #nav-main{
+                visibility: hidden;
+                display: none;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav-bar">
+            <div class="brand-name">
+                Food, LLC
+            </div>
+            <div class="menu" onclick="onClick()">
+                <div class="menu-div"></div>
+                <div class="menu-div"></div>
+                <div class="menu-div"></div>
+            </div>
+        </div>
+        <div id="nav-main">
+            <div class="nav-main-div">Chicken</div>
+            <div class="nav-main-div">Beef</div>
+            <div class="nav-main-div">Sushi</div>
+        </div>
+        <div class="our-menu">
+            Our Menu
+        </div>
+        <div class="main-main">
+             <strong style="margin-left: 40%;">Chicken</strong>
+            <p>
+                Is a version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+
+
+Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.Is a
+                version zombie of a filler text or greeking commonly used to demonstrate the textual elements of a
+                graphic document or visual presentation. Replacing meaningful content with placeholder text allows
+                designers to design the form of the content before the content itself has been produced
+
+                Es la version zombie del texto que se usa habitualmente en diseño gráfico en demostraciones de
+                tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+            </p>
+        </div>
+    </div>
+    <script>
+        let y = false;
+        function onClick() {
+            y = !y;
+            let x = document.getElementById("nav-main");
+            let yy=document.getElementById("")
+            let xx = window.innerWidth;
+            
+
+            if (y) {
+                x.style.visibility = "visible"
+            } 
+            else {
+                x.style.visibility = "hidden"
+
+            }
+        }
+    </script>
+</body>
+
+</html>
+
