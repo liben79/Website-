@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Registration form</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="5Gimages/5g12.jpg" type="image/jpg"/>
+ <style type="text/css">
+ 	body{
+ 		background-image: url(5Gimages/satelite.gif);
+ 		background-repeat: none;
+ 		background-size: cover;
+ 	}
+  .container{
+        width: 99%;
+        text-align: center;
+        margin: 0 auto;
+  }
+    .content{
+    float: left;
+    border:2px;
+  }
+  .rght{
+    width:49.99%;
+  border: 3px solid red;
+  }
+  .left{
+    width: 49.99%;
+  }
+  form{
+  	background-color: rgba(30,200,50,0.7);
+  	color:#000;
+  	font-size: 25px;
+  	float: right;
+  	width: 400px;
+  	height: 430px;
+  	text-align: center;
+  	margin-right: 10px;
+  	border-radius: 10%;
+   margin-right: -700px;
+
+  }
+  input{
+  	padding: 8px;
+  	font-size: 15px;
+  	margin: 5px;
+  	border-radius: 5%;
+  }
+  input:hover{
+  	cursor: pointer;
+  	border: 3px solid brown;
+  }
+
+  h3{
+  	border-bottom:3px solid #004949;
+  }
+  button{
+  	background-color: #004949;
+  	width: 100px;
+  	height: 50px;
+  	border-radius: 30%;
+  	color: #fff;
+  	font-size: 20px;
+  }
+  button:hover{
+  	cursor: pointer;
+  	border: 3px solid #8B0000;
+  }
+  #kiya{
+  	background-color: rgba(20,60,200,0.9);
+  	color: #fff;
+  	margin: 10px;
+  	border-radius: 5%;
+  	text-align: justify;
+    padding: 3px;
+ }
+#NBSI:hover{
+  border:10px solid #8B0000;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+ </style>
+</head>
+
+<body>
+	
+	<div class="topnav">
+		
+      <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="SC.html">Smart City</a></li>
+          <li><a href="game.html">Play Game</a></li>
+          <li><a href="home.html">Smart Home</a></li>
+          <li><a href="device.html">Network Device</a></li>
+          
+      </ul>
+	</div>
+	<div class="container">
+    <div class="content left">
+    <img  id="NBSI" src="5Gimages/NBSI.png" width="500px" height="400px" style="border-radius: 50%;">
+     
+</div>
+
+<div class="content right">
+  <form>
+<h3>Registration Form</h3>
+    First Name<input type="text"  value="" placeholder="Enter your first name" required="bakka duwwaa guuti!" ><autofocus br>
+    Last Name <input type="text"  value="" placeholder="Enter your last name" required="bakka duwwaa guuti!"><br>
+   &nbsp;  password <input type="password"  value="" placeholder="Enter your password" required="bakka duwwaa guuti!"><br><br>
+    <button onclick="galmee()">Register</button>
+    <p id="kiya"></p>
+    <script>
+      function galmee(){
+        document.getElementById("kiya").innerHTML=Date()+"Dhiifama,Yeroof galmee jalhin qabne.";
+      }
+    </script>
+  
+</form>
+</div>
+  </div>
+</body>
+</html>
