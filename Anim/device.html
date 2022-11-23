@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="5Gimages/5g12.jpg" type="image/jpg"/>
+<head>
+<style>
+
+ #div1,#div2{
+  float: left;
+  width: 700px;
+  height: 500px;
+ margin: 20px;
+ padding: 10px;
+  border: 2px solid rgba(200,10,100,1);
+  cursor: pointer;
+
+}
+.general{
+  padding: 10px;
+  margin: 30px;
+  background-color: #003A3A;
+
+  height: 1000px;
+}
+.general img{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10%;
+}
+.general img:hover{
+  width: 600px;
+  height: 400px;
+  cursor: pointer;
+}
+
+
+.subcity3{
+  width: 400px;
+  height: 600px;
+  border-radius: 10%;
+  background-image: url(5Gimages/tower1.jpg);
+  position: relative;
+  animation-name: sub3;
+  animation-duration: 6s;
+  margin: 10px;
+  margin-bottom: 600px;
+  animation: sub3 10s  infinite;
+  animation-delay: 0s;
+  cursor: pointer;
+}
+
+@keyframes sub3 {
+  0%   {background-image: url(5Gimages/robot.gif); left:1000px; top:0px;}
+  20%  {background-image: url(5Gimages/robot.gif); left:800px; top:10px;}
+  40%  {background-image: url(5Gimages/robot.gif); left:600px; top:10px;}
+  60%  {background-image: url(5Gimages/robot.gif); left:400px; top:10px;}
+  80% {background-image: url(5Gimages/robot.gif); left:50px; top:10px;}
+  100% {background-image: url(5Gimages/robot.gif);left:1000px; top:0px;}
+}
+
+.last{
+  margin: 10px;
+
+}
+.last:hover{
+  cursor: pointer;
+}
+
+#reg{
+  float: right;
+  background-color: #004949;
+  width: 120px;
+  height: 50px;
+  border-radius: 30%;
+  margin-right: 20px;
+  margin-top: 3px;
+  
+}
+#reg a{
+  color: #fff;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 25px;
+}
+#reg:hover{
+  border:3px solid brown;
+  cursor: pointer;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+    <div class="topnav">
+    <button id="reg"><a href="registration.html">Register</a></button>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="SC.html">Smart City</a></li>
+          <li><a href="game.html">play game</a></li>
+          <li><a href="home.html">Smart Home</a></li>
+          <li><a href="device.html"  class="active">Network Device</a></li>
+
+      </ul>
+  </div>
+
+  <img src="5Gimages/switch2.gif" width="100%" height="400px">
+
+  <p> <strong><u>Network Switches</u></strong> are used to connect network devices together in a Local Area Network (LAN). Network Switches can control of who has access to various parts of the network. Network Switches have provision to monitor network usage. High-end switches have pluggable modules.</p>
+
+<center>  <img src="5Gimages/switch1.jpg" width="800px"  height="300px"></center>
+
+<p> <strong>A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge)</strong> is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.</p>
+
+ <p> <strong>A network switch </strong>is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.</p>
+
+<p> <strong>Switches for Ethernet</strong> are the most common form of network switch. The first Ethernet switch was introduced by Kalpana in 1990. Switches also exist for other types of networks including Fibre Channel, Asynchronous Transfer Mode, and InfiniBand.</p>
+
+<p> <strong>Unlike repeater hubs</strong>, which broadcast the same data out of each port and let the devices pick out the data addressed to them, a network switch learns the identities of connected devices and then only forwards data to the port connected to the device to which it is addressed.</p>
+ 
+<center> <img src="5Gimages/hub2.gif" width="1000px"  height="300px"></center>
+
+
+<p><strong>Network topology</strong> is the arrangement of the elements (links, nodes, etc.) of a communication network. Network topology can be used to define or describe the arrangement of various types of telecommunication networks, including command and control radio networks, industrial fieldbusses and computer networks.</p>
+<p><strong>Network topology</strong> is the topological structure of a network and may be depicted physically or logically. It is an application of graph theory wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes. Physical topology is the placement of the various components of a network (e.g., device location and cable installation), while logical topology illustrates how data flows within a network. Distances between nodes, physical interconnections, transmission rates, or signal types may differ between two different networks, yet their logical topologies may be identical. A network’s physical topology is a particular concern of the physical layer of the OSI model.</p>
+<h1>Bus Topology design , you can drag and drop it</h1>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="5Gimages/topo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="680px" height="480px">
+</div>
+
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<center><h1 style="color: red; background-color: #005B5B">General idea about Network</h1></center>
+
+<div class="general">
+  
+<center>
+  
+
+  
+   <img src="5Gimages/message.gif" width="300px"  height="300px">
+     <img src="5Gimages/message1.gif" width="300px"  height="300px">
+       <img src="5Gimages/router2.gif" width="300px"  height="300px">
+      
+     
+      
+
+
+
+
+
+</center>
+
+   <div class="subcity3"></div>
+</div>
+
+ <center>
+<h1>Router</h1>
+<div class="last"><img src="5Gimages/router3.gif" width="60%"  height="400px" ></div>
+  </center>
+
+<footer>
+    <h3>&copy;All right reserved </h3>
+
+         <h3>Developd By: @Liiban Godaanaa  , 04/01/2021 Nanjing, China</h3>
+</footer>
+</body>
+</html>

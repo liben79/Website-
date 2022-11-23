@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="rain.gif" type="image/jpg"/>
+<link rel="stylesheet" href="#">
+<title>My Game</title>
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    margin-left: 400px;
+    margin-top:50px;
+    width: 800px;
+    height: 400px;
+    background-color: #884dff;
+    border-radius: 10%;
+
+}
+#reg{
+    float: right;
+    margin-right:100px;
+  background-color: #978;
+  color: #fff;
+  text-decoration: none;
+  width: 150px;
+  height: 55px;
+  font-size: 30px;
+}
+#reg:hover{
+    cursor: pointer;
+    color: white;
+   background-color:#fff;
+  
+
+}
+#direction{
+    margin-left: 550px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
+.topnav{
+  background:#005;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  margin-top: 150px;
+
+    }
+.topnav ul{
+    list-style-type: none;
+    font-size: 30px;
+    overflow: hidden;
+margin-left: 10%;
+    color: #fff;
+
+}
+.topnav ul li{
+    float: left;
+    padding: 10px;
+  
+}
+.topnav ul li a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+}
+.topnav ul li a:hover:not(.active){
+opacity: 1;
+border-bottom: 5px solid brown;
+}
+.active{
+    opacity: 1;
+border-bottom: 10px solid green;
+
+
+}
+</style>
+</head>
+
+
+<body onload="startGame()">
+<script>
+
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+var mySound;
+
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    mySound = new sound("gm/tap1.mp3");
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+             mySound.play();
+            myGameArea.stop();
+            return;
+        } 
+    }
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].speedX = -1;
+        myObstacles[i].newPos();
+        myObstacles[i].update();
+    }
+    myScore.text="SCORE: " + myGameArea.frameNo;
+    myScore.update();
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+function moveup() {
+    myGamePiece.speedY = -1; 
+}
+
+function movedown() {
+    myGamePiece.speedY = 1; 
+}
+
+function moveleft() {
+    myGamePiece.speedX = -1; 
+}
+
+function moveright() {
+    myGamePiece.speedX = 1; 
+}
+
+function clearmove() {
+    myGamePiece.speedX = 0; 
+    myGamePiece.speedY = 0; 
+}
+function reload(){
+    location.reload();
+}
+</script>
+<div id="direction" style="text-align:center;width:480px;">
+  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()"><img src="gm/up.jpg" width="40px"  height="40px"></button><br><br>
+  <button  onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()"><img src="gm/left.png" width="40px"  height="40px"></button>
+  <button onmousedown="reload()" onmouseup="clearmove()" ontouchstart="movedown()"><img src="gm/start.jpg" width="40px"  height="40px"></button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()"><img src="gm/right.png" width="40px"  height="40px"></button><br><br>
+  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()"><img src="gm/down.png" width="40px"  height="40px"></button>
+</div>
+
+   
+
+</body>
+ <div class="topnav">
+        <button id="reg"><a href="registration.html">Register</a></button>
+      <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="SC.html">Smart City</a></li>
+          <li><a href="game.html" class="active">Play Game</a></li>
+          <li><a href="home.html">Smart Home</a></li>
+          <li><a href="device.html">Network Device</a></li>
+         
+      </ul>
+    </div>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Smart City</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="5Gimages/5g12.jpg" type="image/jpg"/>
+ <style type="text/css">
+ 	
+#bcity{
+	 width: 100%;
+	 height: 900px;
+	 display: flex;
+
+
+}
+#city1{
+	width: 30%;
+	height:900px;
+	background: url(5Gimages/rain2.gif);
+	float: left;
+
+}
+#city2{
+	width: 40%;
+	height: 900px;
+	background: url(5Gimages/rain.gif);
+
+
+}
+
+#city3{
+	width: 30%;
+	height:900px;
+	background: url(5Gimages/rain2.gif);
+	float: right;
+
+}
+
+.subcity1{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(5Gimages/city1.gif);
+  position: relative;
+  animation-name: sub1;
+  animation-duration: 6s;
+  margin: 10px;
+  margin-bottom: 600px;
+  animation: sub1 10s  infinite;
+
+
+}
+.subcity1:hover{
+	cursor: pointer;
+	width: 500px;
+	height: 500px;
+	animation: none;
+}
+
+@keyframes sub1 {
+  0%   {background-image: url(5Gimages/5g3.jpg); left:20%; top:0px;}
+  20%  {background-image: url(5Gimages/5g9.jpg); left:20%; top:0px;}
+  40%  {background-image: url(5Gimages/5g4.jpg); left:20%; top:100px;}
+  60%  {background-image: url(5Gimages/5g16.jpg); left:20%; top:600px;}
+  80% {background-image: url(5Gimages/5g13.jpg); left:20%; top:100px;}
+  100% {background-image: url(5Gimages/5g14.jpg);left:20%; top:0px;}
+}
+.top{
+	margin:0 auto;
+	border-radius: 10%;
+
+}
+.subcity2{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(5Gimages/tower.gif);
+  position: relative;
+  animation-name: sub2;
+  animation-duration: 6s;
+  margin: 10px;
+  margin-bottom: 600px;
+  animation: sub2 10s  infinite;
+animation-delay: 2s;
+}
+.subcity2:hover{
+	cursor: pointer;
+	width: 500px;
+	height: 500px;
+	animation: none;
+
+}
+
+@keyframes sub2 {
+  0%   {background-image: url(5Gimages/5g3.jpg); left:20%; top:0px;}
+  20%  {background-image: url(5Gimages/5g9.jpg); left:50%; top:0px;}
+  40%  {background-image: url(5Gimages/5g4.jpg); left:0%; top:100px;}
+  60%  {background-image: url(5Gimages/5g16.jpg); left:50%; top:600px;}
+  80% {background-image: url(5Gimages/5g13.jpg); left:0%; top:100px;}
+  100% {background-image: url(5Gimages/5g14.jpg);left:20%; top:0px;}
+}
+
+.subcity3{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(5Gimages/city.gif);
+  position: relative;
+  animation-name: sub3;
+  animation-duration: 6s;
+  margin: 10px;
+  margin-bottom: 600px;
+  animation: sub3 10s  infinite;
+  animation-delay: 1s;
+}
+
+.subcity3:hover{
+	cursor: pointer;
+	width: 500px;
+	height: 500px;
+	animation: none;
+}
+
+@keyframes sub3 {
+  0%   {background-image: url(5Gimages/5g2.jpg); left:20%; top:0px;}
+  20%  {background-image: url(5Gimages/5g9.jpg); left:20%; top:0px;}
+  40%  {background-image: url(5Gimages/5g4.jpg); left:20%; top:100px;}
+  60%  {background-image: url(5Gimages/5g16.jpg); left:20%; top:600px;}
+  80% {background-image: url(5Gimages/5g13.jpg); left:20%; top:100px;}
+  100% {background-image: url(5Gimages/5g14.jpg);left:20%; top:0px;}
+}
+
+.p{
+	text-align: justify;
+	font-size: 25px;
+}
+#reg{
+	float: right;
+	background-color: #004949;
+	width: 120px;
+	height: 50px;
+	border-radius: 30%;
+	margin-right: 20px;
+	margin-top: 3px;
+  
+}
+#reg a{
+	color: #fff;
+	list-style-type: none;
+	text-decoration: none;
+	font-size: 25px;
+}
+#reg:hover{
+	border:3px solid brown;
+	cursor: pointer;
+}
+ </style>
+</head>
+<body>
+
+	<div class="topnav">
+		<button id="reg"><a href="registration.html">Register</a></button>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="SC.html" class="active">Smart City</a></li>
+          <li><a href="game.html">Play Game</a></li>
+          <li><a href="home.html">Smart Home</a></li>
+          <li><a href="device.html">Network Device</a></li>
+      
+      </ul>
+	</div>
+	   <center>  <h1 style=" margin-top: 10px; ">What is a
+smart city?</h1></center>
+      
+      <div id="bcity">
+
+		
+		<div id="city1">
+			
+
+			<div class="subcity1">
+				
+			</div>
+
+		</div>
+     	<div id="city2">
+		
+
+			<div class="subcity2">
+				
+			</div>
+
+		</div>
+		<div id="city3">
+
+
+ 	<div class="subcity3">
+				
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+	
+
+       <p>
+<strong>A smart city </strong>is an urban development using <strong>Information and Communication Technology (ICT) and Internet of Things (IoT) </strong>to provide useful information to effectively manage resources and assets. This includes data collected from citizens and mechanical devices, that are processed and analyzed to monitor and manage traffic and transport systems, power plants, water supply networks, waste disposal, etc.</p>
+<center> <img src="5Gimages/city4.jpg" width="800px" height="400px"  style=" cursor: pointer;"> </center>
+
+<p>Also called <strong>eco-city or sustainable city</strong>, the smart city aims to improve the quality of urban services or reduce its costs. It stands out for its specificities: smart management, lifestyle, mobility, housing, as well as a smart economy. Their main goal is to reconcile technological innovation with the economic, social and ecological challenges of the city of tomorrow. Their leitmotiv is the quality of life: how to live better together while respecting our environment.</p>
+		<center>  
+    <h2 style="color:brown"> Baga gara weebsaayiti keennatti nagaan dhuftan.</h2>  
+    <h4> Yoo Nagaa na fuudhu barbaade gorfa kan tuqi. </h4>   
+      
+             <!-- create a button to call the function to play a beep sound -->  
+    <button onclick="play()"><img src="5Gimages/gorfa.jpg" width="100px" height="100px" style="border-radius: 80%; cursor: pointer;" ></button>   
+  
+    <script>   
+            //JavaScript function to play the beep sound  
+            function play() {   
+        var beepsound = new Audio(   
+'jal.mp3');   
+        beepsound.play();
+
+    }   
+    </script>   
+</center>  
+	
+
+
+	<p>
+	<strong>A smart city </strong>is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection,information systems, schools, libraries, hospitals, and other community services. </p>
+
+	<div class="top">
+		<center>	 <img src="5Gimages/city3.gif" width="800px" height="400px" style="cursor: pointer;"></center>
+		</div>
+
+<p>The smart city concept integrates <strong> information and communication technology (ICT),</strong> and various physical devices connected to the IoT (Internet of things) network to optimize the efficiency of city operations and services and connect to citizens. Smart city technology allows city officials to interact directly with both community and city infrastructure and to monitor what is happening in the city and how the city is evolving. ICT is used to <strong>enhance quality, performance and interactivity of urban services</strong>, to reduce costs and resource consumption and to increase contact between citizens and government.Smart city applications are developed to manage urban flows and allow for real-time responses.A smart city may therefore be more prepared to respond to challenges than one with a simple "transactional" relationship with its citizens. Yet, the term itself remains unclear to its specifics and therefore, open to many interpretations.
+	</p>
+	<footer>
+		<h3>&copy;All right reserved </h3>
+
+         <h3>Developd By: @Liiban Godaanaa  , 04/05/2021 Nanjing, China</h3>
+</footer>
+</body>
+</html>
